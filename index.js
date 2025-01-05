@@ -4,7 +4,13 @@ const cors = require("cors");
 const requestProductsRoutes = require("./routes/requestProductsRoutes");
 
 const app = express();
-app.use(cors());
+const corsOptions = {
+    origin: "*", // Permite qualquer origem. Alterar para uma URL específica para maior segurança.
+    methods: "GET,POST,PUT,DELETE", // Métodos permitidos
+    allowedHeaders: "Content-Type,Authorization", // Cabeçalhos permitidos
+  };
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // Rotas
