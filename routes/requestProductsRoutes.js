@@ -7,7 +7,9 @@ const {
 
 const router = express.Router();
 
-router.get("/request-products", getRequestProducts);
-router.delete("/request-products/d/:id", deleteRequestProduct);
-router.get("/products/list", listproducts);
+router.get("/request-products", getRequestProducts); // Acessível em /api/request-products
+router.delete("/request-products/d/:id", deleteRequestProduct); // Acessível em /api/request-products/d/:id
+router.get("/products/list", listproducts); // Acessível em /api/products/list
+
+
 module.exports = router;
