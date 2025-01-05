@@ -1,0 +1,21 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "index.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "env": {
+      "SUPABASE_URL": "@supabase_url",
+      "SUPABASE_KEY": "@supabase_key",
+      "API_URL": "https://backendcicloverde.vercel.app"
+    },
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/index.js"
+      }
+    ]
+  }
+  
