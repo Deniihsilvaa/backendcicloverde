@@ -7,7 +7,7 @@ const {
 
 const router = express.Router();
 
-router.get("/api/request-products", getRequestProducts);
-router.delete("/api/request-products/d/:id", deleteRequestProduct);
-router.get("/api/products/list", listproducts);
+router.get("/request-products", getRequestProducts);
+router.delete("/request-products/d/:id", deleteRequestProduct);
+router.get("/products/list", listproducts);
 module.exports = router;
